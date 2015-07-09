@@ -1,0 +1,45 @@
+extends ../layout
+block content
+    style.
+        .control-group label{
+            margin-right:5px;
+        }
+        #randomData,#resultData{
+            font-size:16px;
+            margin:20px;
+            word-wrap:break-word; 
+            word-break:break-all;
+            display:block;
+            width:100%;
+        }
+        .methodSel{
+            margin-top:15px;
+            margin-bottom:15px;
+        }
+    script(src="/pages/index.js")
+
+    .container
+        .row.text-center
+            h4 请选择要生成的数组范围和长度
+        legend 请选择
+        .row.control-group.validation-container
+            .col-md-3
+                label(class='control-label',for='dataLow') 下界
+                input(id='dataLow',type='text',placeholder='随你哦')
+            .col-md-3
+                label(class='control-label',for='dataHigh') 上界
+                input(id='dataHigh',type='text',placeholder='请保证大于下界')
+            .col-md-3
+                label(class='control-label',for='dataLenght') 长度
+                input(id='dataLength',type='text',placeholder='小于100')
+            .col-md-3
+                button(class='btn btn-primary',type='submit', id="submit") 生成
+        .row#randomData
+        .row
+            each item in methods
+                .col-md-3.methodSel
+                    button(class='btn btn-primary',id = "method#{item._id}") #{item.title}
+        .row#resultData
+        .row#resultTime
+                                 
+
