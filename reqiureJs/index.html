@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>RequireJS</title>
+<script data-main="main" src="node_modules/requirejs/require.js"></script>
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="index.js"></script>
+</head>
+</head>
+<body>
+	<div class="page-header">
+		<div class="container">
+			<div class="row"><h1>排序</h1>
+			</div>
+		</div>
+	</div>
+	<div class="page-body">
+<style>.control-group label{
+    margin-right:5px;
+}
+#randomData,#resultData{
+    font-size:16px;
+    margin:20px;
+    word-wrap:break-word; 
+    word-break:break-all;
+    display:block;
+    width:100%;
+}
+.methodSel{
+    margin-top:15px;
+    margin-bottom:15px;
+}</style>
+<div class="container">
+	<div class="row text-center">
+		<h4>请选择要生成的数组范围和长度</h4>
+	</div>
+	<legend>请选择</legend>
+	<div class="row control-group validation-container">
+		<div class="col-md-3"><label for="dataLow" class="control-label">下界</label>
+			<input id="dataLow" type="text" placeholder="随你哦">
+		</div>
+		<div class="col-md-3"><label for="dataHigh" class="control-label">上界</label>
+			<input id="dataHigh" type="text" placeholder="请保证大于下界">
+		</div>
+		<div class="col-md-3"><label for="dataLenght" class="control-label">长度</label>
+			<input id="dataLength" type="text" placeholder="小于100">
+		</div>
+		<div class="col-md-1">
+			<button type="submit" id="submit" class="btn btn-primary">生成</button>
+		</div>
+		<div class="col-md-1">
+			<button type="submit" id="clear" class="btn btn-primary">清除</button>
+		</div>
+	</div>
+	<div id="randomData" class="row">
+	</div>
+	<div class="row">
+		<div class="col-md-3 methodSel">
+			<button id="method1" class="btn btn-primary">插入排序</button></div><div class="col-md-3 methodSel">
+			<button id="method2" class="btn btn-primary">选择排序</button></div><div class="col-md-3 methodSel">
+			<button id="method3" class="btn btn-primary">希尔排序</button></div><div class="col-md-3 methodSel">
+			<button id="method4" class="btn btn-primary">冒泡排序</button></div><div class="col-md-3 methodSel">
+			<button id="method5" class="btn btn-primary">快速排序</button></div><div class="col-md-3 methodSel">
+			<button id="method6" class="btn btn-primary">堆排序</button></div><div class="col-md-3 methodSel">
+			<button id="method7" class="btn btn-primary">归并排序</button>
+		</div>
+	</div>
+	<div id="resultData" class="row">
+	</div>
+	<div id="resultTime" class="row">
+	</div>
+</div>
+</div>
+</body>
+</html>
